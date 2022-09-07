@@ -1,0 +1,595 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+  background-color:#0D0D2B;
+  font-family:'Rubik', sans-serif;
+}
+ 
+nav.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+    padding-left: 3em;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a.nav-link:hover{
+    border-bottom: 2px solid rgba(59,130,246,.5);
+    padding: 5px;
+}
+ul.nav-menu{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 18px;
+    gap: 3em;
+    padding-right: 7em;
+}
+.nav-reg{
+    background-color: #3671E9;
+    border-radius: 20px;
+    padding: 7px 25px;
+}
+span{
+  color:#F2F2F2;
+  color: hsla(0,0%,100%,.2);
+  margin-left:-20px;
+}
+
+.hamburger-icon{
+  display:none;
+  margin:auto;
+  cursor: pointer;
+  margin-right: 1em;
+}
+.hamburger-icon div{
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+ .navopen{
+  display: none;
+  
+ }
+.open .hamburger1{
+  -webkit-transform: rotate (-45deg) translate (-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .hamburger2{
+  opacity: 0;
+}
+.open .hamburger3{
+  -webkit-transform: rotate (45deg) translate (-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5em;
+  
+}
+.mobile-menu{
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh -50px);
+  width: 100%;
+  justify-content: center;
+  color: white; 
+  /* position: fixed; */
+    margin: 3em;
+}
+ li.navlink-mobile  {
+  color: white;
+  padding: 3em;
+  font-size: 18px;
+  list-style-type: none;
+  width: 100%;
+    background-color:#5C59A5;
+} 
+.hero-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2em;
+}
+.hero-text{
+  padding: 4em;
+  justify-content: flex-end;
+  margin-top: 5em;
+}
+p.black{
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50px;
+  width: fit-content;
+  padding-left: 1.3em;
+  color: white;
+  font-size: 20px;
+  
+}
+span.save{
+  background-color: #ffff;
+  color: black;
+  font-weight: 700;
+  border-radius: 20px;
+  padding:5px;
+  margin-right: 20px;
+}
+h1{
+  width: 80%;
+  color: white;
+  padding: auto 5em;
+  font-size: 70px;
+  line-height: 120px;
+  margin-top: 20px;
+}
+p.crypto{
+  color: white;
+  width: 60%;
+  font-size: 20px;
+  line-height: 50px;
+}
+p.try{
+  margin-top: 2em;
+  color: white;
+  font-size: 30px;
+  background-color:#3671E9;
+  padding: 20px;
+  width: fit-content;
+  border-radius:100px;
+}
+p img{
+  background-color: white;
+  padding: 8px;
+  border-radius: 200px;
+  margin-left: 20px;
+  margin-top:10px;
+  cursor: pointer;
+}
+img.first{
+  position: absolute;
+  left:37em;
+  top:20em;
+}
+img.second{
+  position: absolute;
+  left:50em;
+  top:30em;
+}
+.features{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.user{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-text{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  left: 1em;
+} .p-text{
+  display: flex;
+  flex-direction: column;
+}
+p.digital{
+  color: white;
+  font-size: 18px;
+}
+p.text{
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+  margin-top: 2em;
+}
+.bitcoin{
+  padding-right: 3em;
+}
+.section-2{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 5em;
+  gap: 8em;
+  margin-top: 5em;
+}
+.text-section h3{
+  color: white;
+  font-size: 40px;
+  width: 70%;
+  line-height: 70px;
+}
+.text-section p{
+  color: #E0E0E0;
+  font-size: 18px;
+  width: 70%;
+  line-height: 50px;
+  margin-top: 1em;
+}
+.text-section button, .invest-smart button{
+  margin-top: 1em;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1em;
+  background-color: #3671E9;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+}
+.section-3 h3{
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 5em;
+}
+.section-3 p{
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 1em;
+  font-size: 18px;
+  
+}
+img.d{
+  position: absolute;
+  right: 0;
+}
+img.u{
+  position: absolute;
+  top: 1800px;
+  right: 0;
+}
+.form-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container{
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding-top: 3em;
+background-color: white;
+margin-top: 2em;
+height: 100px;
+width: 800px;
+border-radius: 16px 16px 0px 0px;
+}
+form{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8em;
+}
+input[type="text"], select{
+  font-size: 18px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom:  1px solid #E0E0E0;
+  color: black;
+  outline: none;
+}
+input[type="submit"]{
+  padding: 1em;
+  color: white;
+  background-color: #3671E9;
+  border-radius: 32px;
+  font-size: 18px;
+  border: none;
+  padding-left: 1em;
+  cursor: pointer;
+}
+::placeholder{
+  color: black;
+}
+.section-4{
+  background-color: white; 
+}
+.section-4-container{
+  background-color: white;
+  height: 150px;
+  width: 769px;
+  border-radius: 0px 0px 16px 16px;
+  padding: 0.98em;
+  box-shadow: 0px 10px 10px grey;
+}
+
+.eth-container {
+ display: flex;
+ flex-direction: column;
+ padding: 2em;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ p.estimated{
+  color: #3671E9;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 1em;
+  
+}
+p.eth{
+  color: black;
+  font-size: 30px;
+  margin-bottom: .5em;
+  font-weight: 600;
+  width: 100%;
+}
+span.dollar{
+  color: #3671E9;
+  padding-left: 1em;
+}
+p.revenue{
+  color: #828282;
+  padding-bottom: 1em;
+}
+.trade h3{
+  text-align: center;
+  font-size: 30px;
+  background-color: white;
+  margin-top: 5em;
+}
+.trade h3{
+ margin-top: 3em;
+  text-align: center;
+  line-height: 50px;
+  font-size: 40px;
+}
+.crypto-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 3em;
+}
+.bitcoin{
+  background: #F2F2F2;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+.bitcoin:hover{
+background-color: #2B076E;
+color:white;
+}
+.bitcoin h4{
+  margin-top: 1em;
+  font-size: 30px;
+}
+.bitcoin p{
+  text-align: center;
+  line-height: 30px;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  font-size: 18px;
+}
+span.btc{
+  color: #BDBDBD;
+  font-weight: 100;
+  font-size:20px;
+  margin-left: 1em;
+}
+p.mining{
+  background: #3671E9;
+  padding: 10px;
+  color:white;
+  border-radius: 20px;
+  width: 60%;
+  font-size: 18px;
+}
+p img{
+ width: 3%;
+}
+.section-5{
+  background-color: #2B076E;
+  margin-top: 5em;
+  padding-bottom: 5em;
+}
+.section-5 h3{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 3em;
+  line-height: 50px;
+}
+.invest, .chart{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.invest-smart{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 2em;
+  
+}
+.invest-smart h3{
+  font-size:40px;
+  margin-bottom:10px;
+}
+.invest-smart p{
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
+.invest-image img{
+  margin-top: 5em;
+}
+.circular-container img{
+  position: absolute;
+  transform: translateY(-190px);
+  left: 200px;
+}
+.chart{
+  margin-top: 3em;
+}
+h3.grow{
+  text-align: left;
+}
+img.semi{
+  position: absolute;
+  right: 0;
+  transform: translateY(-300px);
+}
+.section-6{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
+  padding: 5em;
+}
+.mining-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3671E9;
+  border-radius: 16px;
+  width:1200px;
+  height: 216px;
+  padding-left: 4em;
+  padding-right: 4em;
+
+}
+.mining-now{
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content:  center;
+  align-items: flex-start;
+ 
+}
+.mining-now h3{
+font-size: 30px;
+}
+.mining-now p{
+  font-size: 18px;
+  line-height: 40px;
+}
+.form input[type="email"]{
+padding: 1em;
+width: 400px;
+background: none;
+color:white;
+outline: 0;
+border-bottom: 1px solid white;
+border-top: 0;
+border-left: 0;
+border-right: 0;
+font-size: 20px;
+}
+.form placeholder{
+  color: white;
+}
+input.white::placeholder{
+  color: white;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+input.submit{
+  padding: 1em;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+}
+img.et, img.bt{
+  position: absolute;
+}
+img.et{
+  left: 200px;
+  transform: translateY(-80px);
+}
+img.bt{
+  right: 150px;
+  transform: translateY(0px);
+}
+footer{
+  background: #0D0D2B;
+   padding:5em;
+}
+.footer-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.quick-link h4{
+  color: white;
+  padding-bottom: 2em;
+  font-size: 20px;
+}
+ul.footer-link{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1em;
+  font-size: 18px;
+}
+.payment h4{
+  color: white;
+  line-height: 50px;
+  font-size: 25px;
+  margin-bottom: 4em;
+}
+.accept{
+  display: flex;
+  justify-content: space-around;
+  gap:1em;
+  align-items: center;
+  
+}
+.logo-crappo{
+  margin-bottom: 13em;
+}
+.footer-text{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4em;
+}
+.social-media{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  padding-right: 4em;
+}
+/* MOBILE VIEW ~ MOBILE SCREEN */
+
+@media screen and (max-width: 768px) {
+ul.nav-menu {
+  display:none;
+}
+.hamburger-icon{
+    display: block;
+}
+}
+  
