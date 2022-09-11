@@ -1,0 +1,1 @@
+Crappo is a crypto platform where you can buy and exchange your crypto assets

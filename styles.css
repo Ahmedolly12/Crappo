@@ -9,11 +9,12 @@ body{
 }
  
 nav.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2em;
-    padding-left: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em;
+  /* width: 100%; */
+
 }
 li{
     list-style-type: none;
@@ -27,12 +28,12 @@ a.nav-link:hover{
     padding: 5px;
 }
 ul.nav-menu{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    font-size: 18px;
-    gap: 3em;
-    padding-right: 7em;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  font-size: 18px;
+  gap: 3em;
+     
 }
 .nav-reg{
     background-color: #3671E9;
@@ -44,71 +45,49 @@ span{
   color: hsla(0,0%,100%,.2);
   margin-left:-20px;
 }
-
-.hamburger-icon{
-  display:none;
-  margin:auto;
+#menu-btn img{
   cursor: pointer;
-  margin-right: 1em;
+  width: 50px;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  top:-20px;
+  margin-top: 50px;
+  margin-right:2em;
+
 }
-.hamburger-icon div{
-  width: 35px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
-}
- .navopen{
+#menu-btn img{
   display: none;
-  
- }
-.open .hamburger1{
-  -webkit-transform: rotate (-45deg) translate (-6px, 6px);
-  transform: rotate(-45deg) translate(-6px, 6px);
 }
-.open .hamburger2{
-  opacity: 0;
+#sidenav{
+  width:250px;
+  height: 100vh;
+  position: fixed;
+  right: 0px;
+  top:0px;
+  background: #2B076E;
+  z-index: 2;
+  transition: 0.5s;
+  display: none;
 }
-.open .hamburger3{
-  -webkit-transform: rotate (45deg) translate (-6px, -8px);
-  transform: rotate(45deg) translate(-6px, -8px);
-}
-.open .mobile-menu{
+
+.nav ul li a{
+  margin: 3em;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  gap: 5em;
-  
 }
-.mobile-menu{
-  display: none;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  height: calc(100vh -50px);
-  width: 100%;
-  justify-content: center;
-  color: white; 
-  /* position: fixed; */
-    margin: 3em;
+.nav ul li a:hover{
+  border-bottom: none;
 }
- li.navlink-mobile  {
-  color: white;
-  padding: 3em;
-  font-size: 18px;
-  list-style-type: none;
-  width: 100%;
-    background-color:#5C59A5;
-} 
 .hero-section{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 2em;
 }
 .hero-text{
-  padding: 4em;
+  padding: 2em;
   justify-content: flex-end;
   margin-top: 5em;
 }
@@ -234,6 +213,8 @@ p.text{
   border-radius: 50px;
   color: white;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 .section-3 h3{
   text-align: center;
@@ -505,14 +486,12 @@ border-left: 0;
 border-right: 0;
 font-size: 20px;
 }
-.form placeholder{
-  color: white;
-}
 input.white::placeholder{
   color: white;
   font-size: 18px;
   letter-spacing: 0.01em;
 }
+
 input.submit{
   padding: 1em;
   background-color: white;
@@ -585,11 +564,294 @@ ul.footer-link{
 /* MOBILE VIEW ~ MOBILE SCREEN */
 
 @media screen and (max-width: 768px) {
-ul.nav-menu {
+  body{
+    overflow-x: hidden;
+  }
+ul.nav-menu{
+  display: none;
+}
+nav.navbar{
+  justify-content: space-around;
+  margin: 1em;
+}
+#menu-btn img{
+  display: block;
+  margin-top: 2em;
+  margin-right: 10px;
+}
+#sidenav{
+  display: block;
+}
+.background-image{
+  display: none;
+}
+.hero-section{
+  flex-direction: column;
+}
+.bitcon{
   display:none;
 }
-.hamburger-icon{
-    display: block;
+.footer-container{
+  flex-direction: column;
 }
+.hero-text{
+  margin: 10px;
+  padding: 0;
 }
+p.black{
+  font-size: 12px;
+}
+span.save{
+  font-weight: 300;
+  font-size: 13px;
+  margin-left: -10px;
+}
+.hero-text h1{
+  font-size: 23px;
+  text-align: left;
+  line-height: 40px;
+  margin-top: 1em;
+  text-align: center;
+   width: auto;
+}
+p.crypto{
+  font-size: 13px;
+  line-height: 25px;
+  text-align: center;
+  width:auto;
+  padding-top: 1em;
+}
+p.try{
+  font-size:12px;
+  padding: 5px;
+  cursor: pointer;
+  margin: 3em auto;
+}
+p.try img{
+  display: none;
+}
+.features{
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1em;
+}
+.user{
+  justify-content: space-around;
+}
+.user img{
+  width: 20%;
+  margin: 5px;
+}
+.user-text{
+  margin: 0;
+}
+p.text{
+  font-size: 20px;
+  margin: 0;
+}
+p.digital{
+  font-size: 14px;
+}
+img.semi, img.u, img.d{
+  display: none;
+}
+.section-2{
+  flex-direction: column;
+  margin-top: 2em;
+  padding:2em;
+}
+.image-section{
+   display: none;
+}
+.text-section h3{
+  font-size: 20px;
+  width: auto;
+  line-height: 30px;
+}
+.text-section p {
+    font-size: 15px;
+    width: auto;
+    line-height: 20px;
+}
+.text-section button, .invest-smart button{
+  font-size: 10px;
+  outline: none;
+  border: none;
+}
+.section-3 h3{
+  font-size: 20px;
+  margin-top: 1em;
+}
+.section-3 p{
+  font-size: 12px;
+  text-align: center;
+}
+
+form{
+  flex-direction: column;
+  gap: 5px;
+}
+.form-container{
+  flex-direction: column;
+  padding-top: 10px;
+}
+input[type="text"], select{
+  padding: 10px;
+  font-size: 10px;
+}
+input[type="submit"]{
+  padding:5px;
+  font-size: 10px;
+  border-radius:2px;
+}
+.form-section, .container{
+   padding: 0 3em;
+}
+.eth-container{
+  padding: 0;
+}
+p.estimated{
+  font-size: 10px;
+}
+p.eth{
+  font-size: 12px;
+}
+span.dollar{
+  padding-left: 1.5em;
+}
+p.revenue{
+  font-size: 10px;
+}
+.section-4-container{
+ height: 100px;
+}
+.trade h3{
+  margin: 1em;
+  font-size: 20px;
+  line-height: 30px;
+}
+.crypto-card{
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 10px;
+  margin-left:2em;
+  margin-right:2em;
+}
+p.mining img{
+  display: none;
+}
+.circular-container img{
+  display:none;
+}
+.bitcoin{
+  padding: 1em;
+}
+.invest{
+  flex-direction: column;
+  justify-content: space-around;
+}
+.invest-image, .feature img{
+  display: none;
+}
+.invest-smart{
+ text-align: center;
+ padding: 1em;
+ margin: 0;
+}
+.invest-smart p{
+  font-size: 12px;
+  text-align: left;
+}
+.section-5 h3{
+  font-size: 15px;
+  line-height: 25px;
+}
+.section-5{
+margin-top: 1em;
+}
+.chart{
+  margin-top: 1px;
+}
+img.et, img.bt{
+  display: none;
+}
+.mining-container{
+  display: flex;
+  flex-direction: column;
+  width:fit-content;
+  height: auto;
+  padding: 1em;
+  background: none;
+  display: none;
+}
+.form{
+  text-align: center;
+}
+input.white::placeholder{
+  font-size: 10px;
+  letter-spacing: 0.01em;
+  padding: 0;
+}
+.form input[type="email"]{
+font-size: 12px;
+width: 100px;
+
+ 
+}
+.mining-now{
+  align-items: center;
+
+}
+.mining-now h3{
+  font-size: 20px;
+}
+.mining-now p{
+  font-size: 12px;
+  line-height: 20px;
+  /* text-align: center; */
+}
+
+input.submit{
+  background-color: white;
+  color: black;
+  font-weight: 600;
+}
+.section-6{
+  flex-direction: column;
+  padding: 0;
   
+}
+footer{
+  padding: 1em;
+}
+.footer-text {
+  flex-direction: column;
+}
+.footer-text p{
+  font-size: 12px;
+}
+.social-media{
+  margin-top:  1em;
+  padding-left: 2em;
+  gap: 1em;
+}
+.logo-crappo{
+margin: 1em;
+}
+.quick-link h4{
+  padding: 1em;
+}
+ul.footer-link{
+  align-items: center;
+  font-size: 15px;
+}
+.payment h4{
+text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 1em;
+}
+.accept a img{
+  width: 70px;
+}
+}
