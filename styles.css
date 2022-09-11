@@ -1,3 +1,5 @@
+/* DESKTOP SCREEN/ VIEW */
+
 *{
     margin: 0;
     padding: 0;
@@ -12,8 +14,8 @@ nav.navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2em;
-  /* width: 100%; */
+  margin: 3em;
+  /* padding-left: 3em; */
 
 }
 li{
@@ -33,6 +35,7 @@ ul.nav-menu{
   align-items: center;
   font-size: 18px;
   gap: 3em;
+  
      
 }
 .nav-reg{
@@ -389,8 +392,7 @@ p img{
 }
 .section-5{
   background-color: #2B076E;
-  margin-top: 5em;
-  padding-bottom: 5em;
+  /* margin-top: 5em; */
 }
 .section-5 h3{
   color: white;
@@ -399,10 +401,21 @@ p img{
   padding-top: 3em;
   line-height: 50px;
 }
-.invest, .chart{
+.invest{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+   margin-left: 3em;
+  padding-bottom: 5em;
+}
+.chart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7em;
+}
+.feature img{
+  padding-left: 5em;
 }
 .invest-smart{
   display: flex;
@@ -410,6 +423,7 @@ p img{
   align-items: flex-start;
   justify-content: center;
   margin-top: 2em;
+  /* padding: 5em; */
   
 }
 .invest-smart h3{
@@ -420,6 +434,7 @@ p img{
   color: white;
   font-size: 20px;
   line-height: 30px;
+  width: 60%;
 }
 .invest-image img{
   margin-top: 5em;
@@ -529,7 +544,7 @@ ul.footer-link{
   align-items: flex-start;
   justify-content: space-between;
   gap: 1em;
-  font-size: 18px;
+  font-size: 20px;
 }
 .payment h4{
   color: white;
@@ -749,18 +764,22 @@ p.mining img{
 .invest{
   flex-direction: column;
   justify-content: space-around;
+  padding-left: 2em;
+
 }
 .invest-image, .feature img{
   display: none;
 }
 .invest-smart{
- text-align: center;
- padding: 1em;
+ align-items: left;
  margin: 0;
+ gap: 0;
 }
 .invest-smart p{
   font-size: 12px;
   text-align: left;
+  /* width: auto; */
+  padding: 0;
 }
 .section-5 h3{
   font-size: 15px;
@@ -840,10 +859,11 @@ margin: 1em;
 }
 .quick-link h4{
   padding: 1em;
+  /* git */
 }
 ul.footer-link{
   align-items: center;
-  font-size: 15px;
+  font-size: 12px;
 }
 .payment h4{
 text-align: center;
